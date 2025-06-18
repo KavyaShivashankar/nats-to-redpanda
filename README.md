@@ -16,6 +16,9 @@ download nats-0.2.2-darwin-arm64.zip
 unzip nats-0.2.2-darwin-arm64.zip
 ensure `nats` is able to run on mac
 
+## get info on nats server
+nats account info
+
 ## create nats stream
 nats stream add my_stream
 
