@@ -1,0 +1,16 @@
+input:
+  #nats:
+  nats_jetstream:
+    urls: [ "nats://127.0.0.1:4222" ]
+    subject: foo  # This will match foo subject
+
+output:
+  #stdout: {}
+  kafka_franz:
+    seed_brokers: [ "localhost:19092" ]
+    topic: testtopic
+    key: ${! meta("nats_subject") }
+    tls:
+      enabled: false
+    sasl: []
+
